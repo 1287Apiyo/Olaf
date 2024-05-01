@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Special Gift for Olaf 
+    </title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+
+     .landing-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        padding: 0 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+     .gift-box-container {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+     .gift-box-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+      }
+
+     .gift-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease-out;
+      }
+
+     .gift-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+     .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+      }
+
+     .content h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #4CAF50;
+      }
+
+     .content p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0;
+        color: #333;
+      }
+
+     .open-button {
+        display: inline-block;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease-out;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+     .open-button:hover {
+        background-color: #3e8e41;
+      }
+
+     .open-button:focus {
+        outline: none;
+      }
+
+     .open-gift-box {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+
+     .open-gift-box.content {
+        opacity: 1;
+      }
+
+     .short-olaf {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        background-color: #4CAF50;
+        border-radius: 50%;
+        animation: short-olaf 2s ease-in-out infinite;
+      }
+
+      @keyframes short-olaf {
+        0% {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        50% {
+          transform: translateX(-50%) rotate(180deg);
+        }
+        100% {
+          transform: translateX(-50%) rotate(360deg);
+        }
+      }
+
+     .olaf-dance {
+        position: absolute;
+        bottom: 70px;
+        left: 70%;
+        transform: translateX(-20%);
+        width: 150px;
+        animation: dance 2s ease-in-out infinite;
+      }
+
+      @keyframes dance {
+        0% {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        50% {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        100% {
+          transform: translateX(-50%) rotate(0deg);
+        }
+      }
+     .olaf2 {
+        position: absolute;
+        bottom: 70px;
+        right: 80%;
+        transform: translateX(-20%);
+        width: 150px;
+        animation: dance 2s ease-in-out infinite;
+      }
+
+      @keyframes dance {
+        0% {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        50% {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        100% {
+          transform: translateX(-50%) rotate(0deg);
+        }
+      }
+/* Media query for mobile views */
+@media only screen and (max-width: 590px) {
+
+.landing-page {
+  padding: 10px; /* Reduced padding for smaller screens */
+}
+
+.gift-box {
+  max-width: 100%; /* Maintains aspect ratio */
+  height: auto;
+}
+
+.content {
+  padding: 15px 0; /* Add vertical padding for content area */
+}
+
+.content h2 {
+  font-size: 1.2rem; /* Adjust font size for better readability */
+}
+
+.content p {
+  font-size: 0.7rem; /* Adjust font size for paragraphs */
+}
+
+/* Adjust element positioning for mobile */
+.short-olaf {
+  bottom: -30px; /* Reduce bottom positioning for smaller screens */
+  width: 30px;
+  height: 30px;
+}
+
+.olaf-dance {
+  width:1px; /* Adjust width for better visibility */
+  bottom: 1000px; /* Reduce bottom positioning */
+  left: 10%; /* Centered horizontally */
+  transform: translateX(20%); /* Center alignment */
+ 
+}
+
+.olaf2 {
+  width: 0.5px;
+  height: 114vh; /* Set height to 100% viewport height */
+  bottom: 40px; /* Reduce bottom positioning */
+  left: 0; /* Positioned at the far left */
+  transform: translateX(0%); /* No horizontal translation needed */
+}
+
+/* Adjust button for mobile */
+.open-button {
+  font-size: 0.8rem; /* Adjust font size for smaller screens */
+  padding: 8px 15px; /* Adjust padding for better click area */
+}
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="landing-page">
+      <h1>Welcome to the Virtual Gift Box for Olaf!</h1>
+      <p>
+        This gift box is a special tribute to our friendship and all the moments we've shared together. Open it up to reveal a surprise that's just for Olaf!
+      </p>
+      <div class="gift-box-container">
+        <a href="gift-box.html" target="_blank" class="gift-box-link">
+          <div class="gift-box">
+            <img src="imagess/gitbox.png" alt="Gift Box" />
+            <div class="content">
+              <h2>A Special Gift Box for Olaf</h2>
+              <p>
+                Dear Olaf,<br /><br />
+                I wanted to create something special to express my love and appreciation for you. Our time together has been filled with countless precious moments, laughter, and memories that I will cherish forever. You've been there for me through thick and thin, and I can't thank you enough for your patience, kindness, and unwavering support.<br /><br />
+                This gift box is a small token of my gratitude for everything you've done for me. I hope it brings a smile to your face and reminds you of the special bond we share.<br /><br />
+                With all my love,<br />
+                [Your Name]
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="short-olaf"></div>
+      <p>
+        <a href="gift-box.html" target="_blank" class="open-button ">Open the Gift Box Memo</a>
+      </p>
+    </div>
+    <div class="olaf-dance">
+        <img src="imagess/Olaf From Frozen Gif (1).gif" alt="Dancing Olaf">
+
+    </div>
+    <div class="olaf2">
+        <img src="imagess/Frozen Olaf GIF - Frozen Olaf Funny - Discover & Share GIFs (3).gif" alt="olaf2">
+    </div>
+  </body>
+</html>
